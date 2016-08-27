@@ -72,8 +72,9 @@ var miniSql={
 		}	
 	},
 	call:(function(obj){
+		var self = Function.prototype.call;
 				return function(){
-					return Function.prototype.call.apply(obj,arguments);
+					return self.apply(obj,arguments);
 				}
 			}(Object.prototype.toString)
 		),
