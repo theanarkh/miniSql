@@ -1,16 +1,3 @@
-<!DOCTYPE HTML>
-<html style="height: 100%">
-<head>
-	<meta charset="utf-8">
-</head>
-<body style="height: 100%">
-<div style="width: 600px;height: 600px" contenteditable="true">
-	
-</div>
-<!--<script type="text/javascript" src="jquery-2.2.3-unzip.js">-->
-</script>
-<script type="text/javascript" src='functionSet.js'></script>
-<script type="text/javascript" >
 var miniSql={
 	id:0,//数据唯一索引
 	db:{},//数据存储对象
@@ -229,5 +216,3 @@ console.log(miniSql.execute("delete",1));
 console.log(miniSql.execute("query",5,['id','age']));
 console.log(miniSql.execute("update",5,{age:2}));
 console.log(miniSql.sort('age'))
-</script>
-</html>
