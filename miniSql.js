@@ -70,14 +70,15 @@ var miniSql={
 			var value = source.getTime()-dest.getTime();
 			return value>0 ? 1 : value<0 ? -1 : 0;
 		}	
-	},
+	},/*
 	call:(function(obj){
 		var self = Function.prototype.call;
 				return function(){
 					return self.apply(obj,arguments);
 				}
 			}(Object.prototype.toString)
-		),
+		),*/
+	call:Object.prototype.toString,
 	compare:function(source,dest){
 		var type = this.call(source).replace(/\[object (\w+?)\]/,'$1').toLowerCase();
 		return this.compareConfig[type](source,dest);
