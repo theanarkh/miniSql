@@ -78,9 +78,9 @@ var miniSql={
 				}
 			}(Object.prototype.toString)
 		),*/
-	call:Object.prototype.toString,
+	toStr:Object.prototype.toString,
 	compare:function(source,dest){
-		var type = this.call(source).replace(/\[object (\w+?)\]/,'$1').toLowerCase();
+		var type = this.toStr(source).replace(/\[object (\w+?)\]/,'$1').toLowerCase();
 		return this.compareConfig[type](source,dest);
 	},
 	add:function(data){
